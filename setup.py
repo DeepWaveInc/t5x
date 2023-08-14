@@ -27,8 +27,8 @@ from version import __version__  # pylint: disable=g-import-not-at-top
 with open('README.md') as fp:
   _LONG_DESCRIPTION = fp.read()
 
-_jax_version = '0.4.11'
-_jaxlib_version = '0.4.11'
+_jax_version = '0.4.13'
+_jaxlib_version = '0.4.13'
 
 setuptools.setup(
     name='t5x',
@@ -48,20 +48,20 @@ setuptools.setup(
     install_requires=[
         'absl-py',
         'cached_property',
-        'clu @ git+https://github.com/google/CommonLoopUtils#egg=clu',
-        'flax @ git+https://github.com/google/flax#egg=flax',
+        'clu=0.0.9',
+        'flax=0.7.0',
         'fiddle >= 0.2.5',
         'gin-config',
-        f'jax >= {_jax_version}',
-        f'jaxlib >= {_jaxlib_version}',
+        f'jax = {_jax_version}',
+        f'jaxlib = {_jaxlib_version}',
         (
             'jestimator @'
             ' git+https://github.com/google-research/jestimator#egg=jestimator'
         ),
         'numpy',
-        'optax @ git+https://github.com/deepmind/optax#egg=optax',
+        'optax = 0.1.7',
         'orbax-checkpoint',
-        'seqio @ git+https://github.com/google/seqio#egg=seqio',
+        'seqio=0.0.15',
         'tensorflow-cpu',
         'tensorstore >= 0.1.20',
         # remove this when sentencepiece_model_pb2 is re-generated in the
