@@ -52,8 +52,8 @@ setuptools.setup(
         'flax == 0.7.0',
         'fiddle >= 0.2.5',
         'gin-config',
-        f'jax = {_jax_version}',
-        f'jaxlib = {_jaxlib_version}',
+        f'jax == {_jax_version}',
+        f'jaxlib == {_jaxlib_version}',
         (
             'jestimator @'
             ' git+https://github.com/google-research/jestimator#egg=jestimator'
