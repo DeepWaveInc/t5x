@@ -48,8 +48,8 @@ setuptools.setup(
     install_requires=[
         'absl-py',
         'cached_property',
-        'clu=0.0.9',
-        'flax=0.7.0',
+        'clu == 0.0.9',
+        'flax == 0.7.0',
         'fiddle >= 0.2.5',
         'gin-config',
         f'jax = {_jax_version}',
@@ -59,14 +59,14 @@ setuptools.setup(
             ' git+https://github.com/google-research/jestimator#egg=jestimator'
         ),
         'numpy',
-        'optax = 0.1.7',
+        'optax == 0.1.7',
         'orbax-checkpoint',
-        'seqio=0.0.15',
+        'seqio == 0.0.15',
         'tensorflow-cpu',
         'tensorstore >= 0.1.20',
         # remove this when sentencepiece_model_pb2 is re-generated in the
         # sentencepiece package.
-        'protobuf==3.20.3',
+        'protobuf == 3.20.3',
     ],
     extras_require={
         'gcp': [
